@@ -1,4 +1,5 @@
 const express=require("express")
+const cors=require("cors");
 
 const app=express();
 const{connection}=require("./config/db")
@@ -7,6 +8,7 @@ const{authenticator}=require("./middleware/authenticator.middleware")
 const{postRouter}=require("./routes/post.route")
 const PORT=8080;
 app.use(express.json())
+app.use(cors())
 
 app.get("/",(req,res)=>{
     res.send("welcome to home page")
