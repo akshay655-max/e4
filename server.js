@@ -6,7 +6,7 @@ const{connection}=require("./config/db")
 const{UserRouter}=require("./routes/user.route")
 const{authenticator}=require("./middleware/authenticator.middleware")
 const{postRouter}=require("./routes/post.route")
-const PORT=8080;
+const PORT=7500;
 app.use(express.json())
 app.use(cors())
 
